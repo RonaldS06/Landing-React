@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 
 const ProductsArray = [
-  {id:1, title: "Nike Air 90", price: "190", image: "producto1.png", color: "#FFDBDF" },
+  {id:1, title: "Nike Air 90 Red", price: "190", image: "producto1.png", color: "#FFDBDF" },
   {id:2, title: "Nike Run Ultra", price: "220", image: "producto2.png", color: "#E0E3E5" },
   {id:3, title: "Nike Air 90 Blue", price: "205", image: "producto3.png", color: "#DBEFFF" },
   {id:4, title: "Nike Air Free 5.0", price: "160", image: "producto4.png", color: "#FFE8DB" },
@@ -18,8 +18,7 @@ const ProductsArray = [
 const TitleProducts = () => {
   return (
     <ProductsContainerStyled>
-      <span id="productos"></span>
-      <h2>
+      <h2 id="productos">
         Nuestros <span>Productos</span>
       </h2>
       <h3>
