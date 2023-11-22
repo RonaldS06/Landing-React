@@ -7,6 +7,7 @@ import {
   FormContacto,
   LabelForm,
   TitleContacto,
+  AsuntoForm,
 } from "./ContactoStyles";
 import Footer from "../../components/Footer/Footer";
 
@@ -28,6 +29,7 @@ const Contacto = () => {
               placeholder="Ingresa tu nombre"
               autocomplete="off"
               name="nombre"
+              required
             />
           </DatoForm>
           <DatoForm>
@@ -37,25 +39,22 @@ const Contacto = () => {
               placeholder="Ingresa tu apellido"
               autocomplete="off"
               name="apellido"
+              required
             />
           </DatoForm>
           <DatoForm>
             <LabelForm>Email</LabelForm>
             <input
-              type="text"
+              type="email"
               placeholder="Ingresa tu email"
               autocomplete="off"
               name="email"
+              required
             />
           </DatoForm>
           <DatoForm>
             <LabelForm>Asunto</LabelForm>
-            <input
-              type="text"
-              placeholder="Ingresa tu asunto"
-              autocomplete="off"
-              name="asunto"
-            />
+            <AsuntoForm placeholder="Ingresa aca tu mensaje" rows="5" required />
           </DatoForm>
 
           <Button onClick={handleSubmit}>Enviar</Button>

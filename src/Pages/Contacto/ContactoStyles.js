@@ -66,3 +66,12 @@ export const Button = styled.button`
     background-color: #d7a700;
   }
 `;
+
+export const AsuntoForm = styled.textarea`
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-size: .91rem;
+`
