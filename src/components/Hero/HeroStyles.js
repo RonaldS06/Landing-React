@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroContainerStyled = styled.section`
+export const HeroContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap:1rem;
@@ -32,7 +32,7 @@ export const HeroInfoStyled = styled(HeroContainerStyled)`
     h1{
         font-weight: bold;
         color: black;
-        line-height: 35px;
+        line-height: 55px;
     } & h1>span{
         color: #AB1E22;
     }
@@ -46,10 +46,10 @@ export const HeroInfoStyled = styled(HeroContainerStyled)`
         align-items: flex-start;
         text-align: start;
         width: 80%;
-
+        
         h1{
             font-size: 3.3rem;
-            line-height: 55px;
+            line-height: 65px;
             margin: 0;
 
             @media (min-width: 1200px) {
@@ -64,7 +64,7 @@ export const HeroImgStyled = styled.div`
 
     img{
         margin-left: -6vw;
-        margin-top: -90px;
+        margin-top: -80px;
         width: 100%;
         position: initial;
         top: 0;

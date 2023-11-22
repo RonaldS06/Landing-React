@@ -1,35 +1,43 @@
-import React from "react";
 import {
   ContainerLinkSesionUser,
   LinkSesionUser,
   LinksContainerStyled,
   MenuHamburguer,
+  MenuItem,
   NavbarContainerStyled,
 } from "./NavbarStyles";
 
 import { motion } from "framer-motion";
+import { useContext } from "react";
 
 import { BiUserCircle } from "react-icons/bi";
-import { HiMenu } from "react-icons/hi";
+import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { NavbarContext } from "./NavbarContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { isMenuOpen, toggleMenu } = useContext(NavbarContext);
+
   return (
     <NavbarContainerStyled>
       <div>
-        <a href="#">
+        <Link to="/">
           <img src="Logo.png" alt="Logo" />
-        </a>
+        </Link>
       </div>
-      <LinksContainerStyled>
-        <li>
-          <a href="#inicio">Inicio</a>
-        </li>
-        <li>
-          <a href="#productos">Productos</a>
-        </li>
-        <li>
-          <a href="#nosotros">Nosotros</a>
-        </li>
+      <LinksContainerStyled isMenuOpen={isMenuOpen}>
+        <MenuItem onClick={toggleMenu}>
+          <Link to="/Home">Inicio</Link>
+        </MenuItem>
+        <MenuItem onClick={toggleMenu}>
+          <Link to="/Nosotros">Nosotros</Link>
+        </MenuItem>
+        <MenuItem onClick={toggleMenu}>
+          <Link to="/Productos">Productos</Link>
+        </MenuItem>
+        <MenuItem onClick={toggleMenu}>
+          <Link to="/Contacto">Contacto</Link>
+        </MenuItem>
       </LinksContainerStyled>
       <ContainerLinkSesionUser>
         <motion.div whileTap={{ scale: 0.95 }}>
@@ -45,8 +53,10 @@ const Navbar = () => {
         </motion.div>
       </ContainerLinkSesionUser>
 
-      <MenuHamburguer>
-      <HiMenu />
+      <MenuHamburguer onClick={toggleMenu}>
+        <motion.div whileTap={{ scale: 1.25 }}>
+          {isMenuOpen ? <HiOutlineX /> : <HiMenu />}
+        </motion.div>
       </MenuHamburguer>
     </NavbarContainerStyled>
   );

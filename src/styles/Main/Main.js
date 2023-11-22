@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
+const Main = styled.main`
     padding: 4rem 0 0;
     @media (min-width: 992px) {
         max-width: 960px;
@@ -14,3 +14,5 @@ export const Main = styled.main`
     }
     
 `
+
+export default Main

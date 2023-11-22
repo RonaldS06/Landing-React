@@ -1,4 +1,3 @@
-import React from "react";
 import { AboutContainerStyled, InfoTextStyled } from "./AboutStyled";
 
 const About = () => {

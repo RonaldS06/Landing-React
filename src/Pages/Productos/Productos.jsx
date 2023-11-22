@@ -1,9 +1,11 @@
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 import {
   CardProductStyled,
   ContainerPricePurchaseStyled,
   ProductsContainerStyled,
   ProductsItemStyled,
-} from "./ProductsStyles";
+} from "./ProductosStyled";
 
 import { motion } from "framer-motion";
 
@@ -36,13 +38,41 @@ const ProductsArray = [
     image: "producto4.png",
     color: "#FFE8DB",
   },
+  {
+    id: 5,
+    title: "Nike Air Free 2.0",
+    price: "160",
+    image: "producto5.png",
+    color: "#DBEFFF",
+  },
+  {
+    id: 6,
+    title: "Nike Air MAX",
+    price: "160",
+    image: "producto6.png",
+    color: "#e1e9db",
+  },
+  {
+    id: 7,
+    title: "Nike Air Max 720",
+    price: "160",
+    image: "producto7.png",
+    color: "#FFDBDF",
+  },
+  {
+    id: 8,
+    title: "Vans Plataforma Old",
+    price: "160",
+    image: "producto8.png",
+    color: "#dbe8ff",
+  },
 ];
 
 const TitleProducts = () => {
   return (
     <ProductsContainerStyled>
       <h2 id="productos">
-        Productos <span>Destacados</span>
+        Nuestros <span>Productos</span>
       </h2>
       <h3>
         Descubre cómo puedes elevar tu estilo a través de la elección del
@@ -67,9 +97,10 @@ const ProductsCard = ({ id, title, price, color, image }) => {
   );
 };
 
-export const Products = () => {
+const Productos = () => {
   return (
     <>
+      <Navbar />
       <TitleProducts />
       <ProductsItemStyled>
         {ProductsArray.map((producto) => (
@@ -82,8 +113,9 @@ export const Products = () => {
           />
         ))}
       </ProductsItemStyled>
+      <Footer />
     </>
   );
 };
 
-export default Products;
+export default Productos;

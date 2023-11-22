@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
     }
     body{
-        background-color: #F6F4ED;;
+        background-color: #F6F4ED;
         font-family: 'Outfit', sans-serif;
     }
     a {
