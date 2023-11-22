@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
       <LinksContainerStyled isMenuOpen={isMenuOpen}>
         <MenuItem onClick={toggleMenu}>
-          <Link to="/Home">Inicio</Link>
+          <Link to="/InicioH">Inicio</Link>
         </MenuItem>
         <MenuItem onClick={toggleMenu}>
           <Link to="/Nosotros">Nosotros</Link>

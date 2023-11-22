@@ -6,7 +6,7 @@ import About from "../../components/About/About";
 import Footer from "../../components/Footer/Footer";
 import Main from "../../styles/Main/Main";
 
-const Home = () => {
+const InicioH = () => {
   return (
     <>
       <Navbar />
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default InicioH;
