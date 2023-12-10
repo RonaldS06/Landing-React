@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import {
   CardProductStyled,
   ContainerPricePurchaseStyled,
   ProductsContainerStyled,
   ProductsItemStyled,
 } from "./ProductsStyles";
-
 import { motion } from "framer-motion";
 
 const ProductsArray = [
@@ -60,7 +60,7 @@ const ProductsCard = ({ id, title, price, color, image }) => {
       <ContainerPricePurchaseStyled>
         <p>${price}</p>
         <motion.div whileTap={{ scale: 0.95 }}>
-          <a href="#producto">Comprar</a>
+          <Link to="/Productos">Ver más</Link>
         </motion.div>
       </ContainerPricePurchaseStyled>
     </CardProductStyled>

@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const AgregarCarritoMensaje = styled.div`
+    background-color: black;
+    color: white;
+    border: 2px solid orange;
+    border-radius: 30px;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    padding: 10px 15px;
+`
+
 export const ProductsContainerStyled = styled.div`
     padding: 7rem 0 0;
     display: flex;
@@ -65,10 +76,11 @@ export const ContainerPricePurchaseStyled = styled.div`
     a{
         font-weight: 500;
         color: black;
-        background-color: #FDC400;
+        background-color: #FDC401;
         padding: 10px 1rem;
         border-radius: 20px;
         transition: all .3s ease-in-out;
+        cursor: pointer;
     }& a:hover{
         background-color: #EDB802;
     }

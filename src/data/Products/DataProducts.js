@@ -1,0 +1,58 @@
+export const ProductsArray = [
+    {
+        id: 1,
+        title: "Nike Air 90 Red",
+        price: "190",
+        image: "producto1.png",
+        color: "#FFDBDF",
+    },
+    {
+        id: 2,
+        title: "Nike Run Ultra",
+        price: "220",
+        image: "producto2.png",
+        color: "#E0E3E5",
+    },
+    {
+        id: 3,
+        title: "Nike Air 90 Blue",
+        price: "205",
+        image: "producto3.png",
+        color: "#DBEFFF",
+    },
+    {
+        id: 4,
+        title: "Nike Air Free 5.0",
+        price: "185",
+        image: "producto4.png",
+        color: "#FFE8DB",
+    },
+    {
+        id: 5,
+        title: "Nike Air Free 2.0",
+        price: "160",
+        image: "producto5.png",
+        color: "#DBEFFF",
+    },
+    {
+        id: 6,
+        title: "Nike Air MAX",
+        price: "149",
+        image: "producto6.png",
+        color: "#e1e9db",
+    },
+    {
+        id: 7,
+        title: "Nike Air Max 720",
+        price: "255",
+        image: "producto7.png",
+        color: "#FFDBDF",
+    },
+    {
+        id: 8,
+        title: "Vans Plataforma Old",
+        price: "110",
+        image: "producto8.png",
+        color: "#dbe8ff",
+    },
+];
