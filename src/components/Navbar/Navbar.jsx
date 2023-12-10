@@ -17,7 +17,8 @@ import { HiMenu, HiOutlineX } from "react-icons/hi";
 import { NavbarContext } from "./NavbarContext";
 import { Link } from "react-router-dom";
 import CartIcon from "./CartIcon/CarIcon";
-import CartModal from "./CartModal/cartModal";
+import CartModal from "./CartModal/cartModal.jsx";
+
 import { useSelector } from "react-redux";
 import { selectCarrito } from "./CartModal/CarritoSlice";
 
