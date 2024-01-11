@@ -65,6 +65,10 @@ export const CardProductStyled = styled.div`
     }
     img{
         object-fit: cover;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    } img:hover{
+        transform: rotate(-4deg);
     }
 `
 export const ContainerPricePurchaseStyled = styled.div`

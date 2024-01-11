@@ -52,7 +52,7 @@ export const LabelForm = styled.label`
   font-size: 1.3rem;
 `
 
-export const Button = styled.button`
+export const ButtonSubmitStyled = styled.button`
   background-color: #FDC400;
   width: 100%;
   font-size: 1rem;

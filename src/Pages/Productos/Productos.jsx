@@ -11,7 +11,10 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts, selectProducts } from "./ProductSlice";
 import { ProductsArray } from "../../data/Products/DataProducts";
-import { agregarProducto } from "../../components/Navbar/CartModal/CarritoSlice";
+import {
+  agregarProducto,
+  cargarCarrito,
+} from "../../components/Navbar/CartModal/CarritoSlice";
 import AgregadoAlCarritoMensaje from "./AgregadoAlCarritoMensaje";
 import PrecioFiltro from "./PrecioFiltro";
 
@@ -73,6 +76,10 @@ const Productos = () => {
   const [filtroPrecio, setFiltroPrecio] = useState("menor");
 
   useEffect(() => {
+    //Cargar carrito al cargar pagina
+    const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+    dispatch(cargarCarrito(carritoGuardado));
+
     dispatch(setProducts(ProductsArray));
   }, [dispatch]);
 
