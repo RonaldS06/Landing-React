@@ -36,7 +36,7 @@ const CartCardModal = ({ producto }) => {
     <CartProducts>
       <CartItem>
         <ProductInfo>
-          <ItemImg src={`public/${producto.image}`} alt={producto.title} />
+          <ItemImg src={`${producto.image}`} alt={producto.title} />
           <TitlePrice>
             <Title>{producto.title}</Title>
             <Price>${producto.price}</Price>

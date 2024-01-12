@@ -78,7 +78,7 @@ const CartModal = ({ isOpen, onClose }) => {
       <ButtonsCart>
         {/* Icono imagen para borrar todos los productos */}
         <ImgDelete
-          src="public\icon-delete.svg"
+          src="icon-delete.svg"
           alt="Icono borrar todos los productos"
           onClick={ModalAvisoEliminar}
           disabled={carrito.productos.length === 0}
