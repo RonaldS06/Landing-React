@@ -20,3 +20,31 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
+/* 
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import InicioH from '../Pages/Inicio/InicioH';
+import Contacto from '../Pages/Contacto/Contacto';
+import Nosotros from '../Pages/Nosotros/Nosotros';
+import Productos from '../Pages/Productos/Productos';
+
+const AppRoutes = () => {
+  return (
+    <Router basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path="/" element={<InicioH />} />
+        <Route path="/InicioH" element={<InicioH />} />
+        <Route path="/Nosotros" element={<Nosotros />} />
+        <Route path="/Productos" element={<Productos />} />
+        <Route path="/Contacto" element={<Contacto />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default AppRoutes;
+
+
+*/
