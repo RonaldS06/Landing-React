@@ -62,7 +62,6 @@ export const ButtonTotal = styled.div`
   &:hover {
   background-color: black;
   color: white;
-  background-image: url(public\producto1.png);
 }
 `
 export const BtnPagar = styled.span`

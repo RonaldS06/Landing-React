@@ -67,8 +67,9 @@ export const CardProductStyled = styled.div`
         object-fit: cover;
         cursor: pointer;
         transition: all .3s ease-in-out;
+        
     } img:hover{
-        transform: rotate(-4deg);
+        /* filter: drop-shadow(1px 1px 8px black); */
     }
 `
 export const ContainerPricePurchaseStyled = styled.div`
@@ -86,6 +87,6 @@ export const ContainerPricePurchaseStyled = styled.div`
         transition: all .3s ease-in-out;
         cursor: pointer;
     }& a:hover{
-        background-color: #EDB802;
+        background-color: #bf9400;
     }
 `
