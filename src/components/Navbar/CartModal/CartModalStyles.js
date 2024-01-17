@@ -10,6 +10,9 @@ export const ModalContainerStyled = styled.div`
   top: 100px;
   right: 20px;
   max-width: 470px;
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
+-webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
 `;
 
 export const IconClose = styled.div`
