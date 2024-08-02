@@ -7,7 +7,7 @@ import {
 const Hero = () => {
   return (
     <HeroContainerStyled>
-      <span id="InicioH"></span>
+      <span></span>
       <img src="detail1.png" alt="detalle1" />
       <HeroInfoStyled>
         <h1>

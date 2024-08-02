@@ -10,6 +10,7 @@ import {
   TitleAndClose,
   IconClose,
   TitleH2,
+  ModalStyledCart,
 } from "./CartModalStyles"; // Asegúrate de crear estos estilos
 
 import CartCardModal from "./CartCardModal";
@@ -57,61 +58,63 @@ const CartModal = ({ isOpen, onClose }) => {
   return (
     <ModalContainerStyled>
       {/* Contenido del carrito y botones */}
-      <TitleAndClose>
-        {/* Mostrar el mensaje de compra exitosa */}
-        <TitleH2>TUS PRODUCTOS</TitleH2>
+      <ModalStyledCart>
+        <TitleAndClose>
+          {/* Mostrar el mensaje de compra exitosa */}
+          <TitleH2>TUS PRODUCTOS</TitleH2>
 
-        <IconClose>
-          <motion.div whileTap={{ scale: 1.25 }}>
-            <HiOutlineX onClick={onClose} />
-          </motion.div>
-        </IconClose>
-      </TitleAndClose>
-      <ContainerCart>
-        {/* Aca va CartCardModal */}
-        {carrito.productos.map((producto) => (
-          <CartCardModal key={producto.id} producto={producto} />
-        ))}
-        {/* Fin va CartCardModal */}
-      </ContainerCart>
+          <IconClose>
+            <motion.div whileTap={{ scale: 1.25 }}>
+              <HiOutlineX onClick={onClose} />
+            </motion.div>
+          </IconClose>
+        </TitleAndClose>
+        <ContainerCart>
+          {/* Aca va CartCardModal */}
+          {carrito.productos.map((producto) => (
+            <CartCardModal key={producto.id} producto={producto} />
+          ))}
+          {/* Fin va CartCardModal */}
+        </ContainerCart>
 
-      <ButtonsCart>
-        {/* Icono imagen para borrar todos los productos */}
-        <ImgDelete
-          src="icon-delete.svg"
-          alt="Icono borrar todos los productos"
-          onClick={ModalAvisoEliminar}
-          disabled={carrito.productos.length === 0}
-        />
-        {carrito.productos.length > 0 && (
-          <ModalGral estado={estadoModal2} cambioEstado={setEstadoModal2}>
-            <ContenidoModal>
-              <h2>¿Eliminar todos los productos?</h2>
-              <p>Se eliminaran todos tus productos del carrito</p>
-              <BtnAceptar onClick={LimpiarCarrito}>Aceptar</BtnAceptar>
-            </ContenidoModal>
-          </ModalGral>
-        )}
+        <ButtonsCart>
+          {/* Icono imagen para borrar todos los productos */}
+          <ImgDelete
+            src="icon-delete.svg"
+            alt="Icono borrar todos los productos"
+            onClick={ModalAvisoEliminar}
+            disabled={carrito.productos.length === 0}
+          />
+          {carrito.productos.length > 0 && (
+            <ModalGral estado={estadoModal2} cambioEstado={setEstadoModal2}>
+              <ContenidoModal>
+                <h2>¿Eliminar todos los productos?</h2>
+                <p>Se eliminaran todos tus productos del carrito</p>
+                <BtnAceptar onClick={LimpiarCarrito}>Aceptar</BtnAceptar>
+              </ContenidoModal>
+            </ModalGral>
+          )}
 
-        {/* Boton para realizar la compra */}
-        <ButtonTotal
-          onClick={ModalAvisoCompra}
-          disabled={carrito.productos.length === 0}
-        >
-          <BtnPagar>Ir a pagar</BtnPagar>
-          <PriceTotal>Subtotal ${calcularSubtotal()}</PriceTotal>
-        </ButtonTotal>
-        {/* Modal Finalizar Compra */}
-        {carrito.productos.length > 0 && (
-          <ModalGral estado={estadoModal1} cambioEstado={setEstadoModal1}>
-            <ContenidoModal>
-              <h2>Desea Comprar?</h2>
-              <p>Compra de forma segura en GoodAr</p>
-              <BtnAceptar onClick={finalizarCompra}>Aceptar</BtnAceptar>
-            </ContenidoModal>
-          </ModalGral>
-        )}
-      </ButtonsCart>
+          {/* Boton para realizar la compra */}
+          <ButtonTotal
+            onClick={ModalAvisoCompra}
+            disabled={carrito.productos.length === 0}
+          >
+            <BtnPagar>Ir a pagar</BtnPagar>
+            <PriceTotal>Subtotal ${calcularSubtotal()}</PriceTotal>
+          </ButtonTotal>
+          {/* Modal Finalizar Compra */}
+          {carrito.productos.length > 0 && (
+            <ModalGral estado={estadoModal1} cambioEstado={setEstadoModal1}>
+              <ContenidoModal>
+                <h2>Desea Comprar?</h2>
+                <p>Compra de forma segura en GoodAr</p>
+                <BtnAceptar onClick={finalizarCompra}>Aceptar</BtnAceptar>
+              </ContenidoModal>
+            </ModalGral>
+          )}
+        </ButtonsCart>
+      </ModalStyledCart>
     </ModalContainerStyled>
   );
 };

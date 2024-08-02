@@ -4,16 +4,24 @@ import styled from "styled-components";
 
 export const ModalContainerStyled = styled.div`
   position: absolute;
+  max-width: 1200px;
+  left:0;
+  right: 0;
+  
+  top: 75px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: end;
+  
+`;
+
+export const ModalStyledCart = styled.div`
   background-color: white;
   padding: 20px;
-  border-radius: 10px;
-  top: 100px;
-  right: 20px;
-  max-width: 470px;
-  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
--webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
--moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
-`;
+  border-radius: 30px;
+  border: 1px solid #ddd4d4;
+`
 
 export const IconClose = styled.div`
     cursor: pointer;
