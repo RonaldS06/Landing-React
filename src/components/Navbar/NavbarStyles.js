@@ -2,23 +2,32 @@ import styled from "styled-components";
 
 export const NavbarContainerStyled = styled.nav`
     height: fit-content;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    /* background-color: white; */
+    margin-top: 15px;
     position: fixed;
     width: 100%;
+`
+
+export const MainLinkg = styled.div`
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 0 30px;
 `
 
 export const LinksContainerStyled = styled.ul`
     display: flex;
     position: absolute;
     background-color: white;
-    top: 5rem;
+    top: 4.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    border-radius: 30px;
     gap: 2rem;
     height: 30vh;
     left: ${(props) => (props.isMenuOpen ? "0%" : "-100%")};
@@ -47,10 +56,12 @@ export const MenuItem = styled.li`
         padding: 5px;
     }
     cursor: pointer;
+    & a{
+        font-weight: 500;
+    }
 `
 
-export const Link = styled.a`
-    color: white;
+/* export const Link = styled.a`
     font-size: 20px;
     color: black;
     font-weight: 500;
@@ -59,7 +70,7 @@ export const Link = styled.a`
         font-weight: 400;
         transition: all .3s ease-in-out;
     }
-`
+` */
 
 export const ContainerSesionUser = styled.div`
     display: none;
@@ -87,6 +98,7 @@ export const LinkSesionUser = styled.div`
     display: flex;
     gap: 5px;
     align-items: center;
+    margin-left: 10px;
     cursor: pointer;
     a{
         color: black;

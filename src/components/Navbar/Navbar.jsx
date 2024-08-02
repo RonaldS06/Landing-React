@@ -7,6 +7,7 @@ import {
   MenuHamburguer,
   MenuItem,
   NavbarContainerStyled,
+  MainLinkg,
 } from "./NavbarStyles";
 
 import { motion } from "framer-motion";
@@ -34,47 +35,49 @@ const Navbar = () => {
 
   return (
     <NavbarContainerStyled>
-      <LinkLogo>
-        <Link to="/">
-          <img src="Logo.png" alt="Logo" />
-        </Link>
-      </LinkLogo>
-      <LinksContainerStyled isMenuOpen={isMenuOpen}>
-        <MenuItem onClick={toggleMenu}>
-          <Link to="/InicioH">Inicio</Link>
-        </MenuItem>
-        <MenuItem onClick={toggleMenu}>
-          <Link to="/Nosotros">Nosotros</Link>
-        </MenuItem>
-        <MenuItem onClick={toggleMenu}>
-          <Link to="/Productos">Productos</Link>
-        </MenuItem>
-        <MenuItem onClick={toggleMenu}>
-          <Link to="/Contacto">Contacto</Link>
-        </MenuItem>
-      </LinksContainerStyled>
+      <MainLinkg>
+        <LinkLogo>
+          <Link to="/">
+            <img src="Logo.png" alt="Logo" height="65"/>
+          </Link>
+        </LinkLogo>
+        <LinksContainerStyled isMenuOpen={isMenuOpen}>
+          <MenuItem onClick={toggleMenu}>
+            <Link to="/Inicio">Inicio</Link>
+          </MenuItem>
+          <MenuItem onClick={toggleMenu}>
+            <Link to="/Nosotros">Nosotros</Link>
+          </MenuItem>
+          <MenuItem onClick={toggleMenu}>
+            <Link to="/Productos">Productos</Link>
+          </MenuItem>
+          <MenuItem onClick={toggleMenu}>
+            <Link to="/Contacto">Contacto</Link>
+          </MenuItem>
+        </LinksContainerStyled>
 
-      <ContainerMenuCart>
-        <motion.div whileTap={{ scale: 1.1 }}>
-          <CartIcon onClick={handleCartClick} cantidadTotal={cantidadTotal} />
-        </motion.div>
-        {isCartOpen && <CartModal onClose={() => setCartOpen(false)} />}
-
-        <ContainerSesionUser>
-          <motion.div whileTap={{ scale: 0.95 }}>
-            <LinkSesionUser color>
-              <a href="#">Iniciar Sesión</a>
-              <BiUserCircle />
-            </LinkSesionUser>
+        <ContainerMenuCart>
+          <motion.div whileTap={{ scale: 1.1 }}>
+            <CartIcon onClick={handleCartClick} cantidadTotal={cantidadTotal} />
           </motion.div>
-        </ContainerSesionUser>
+          {isCartOpen && <CartModal onClose={() => setCartOpen(false)} />}
 
-        <MenuHamburguer onClick={toggleMenu}>
-          <motion.div whileTap={{ scale: 1.25 }}>
-            {isMenuOpen ? <HiOutlineX /> : <HiMenu />}
-          </motion.div>
-        </MenuHamburguer>
-      </ContainerMenuCart>
+          <ContainerSesionUser>
+            <motion.div whileTap={{ scale: 0.95 }}>
+              <LinkSesionUser color>
+                <a href="#">Iniciar Sesión</a>
+                <BiUserCircle />
+              </LinkSesionUser>
+            </motion.div>
+          </ContainerSesionUser>
+
+          <MenuHamburguer onClick={toggleMenu}>
+            <motion.div whileTap={{ scale: 1.25 }}>
+              {isMenuOpen ? <HiOutlineX /> : <HiMenu />}
+            </motion.div>
+          </MenuHamburguer>
+        </ContainerMenuCart>
+      </MainLinkg>
     </NavbarContainerStyled>
   );
 };
