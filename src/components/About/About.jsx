@@ -3,7 +3,7 @@ import { AboutContainerStyled, InfoTextStyled } from "./AboutStyled";
 const About = () => {
   return (
     <AboutContainerStyled>
-      <img src="about.png" alt="Zapatillas About" id="nosotros"/>
+      <img src="about.png" alt="Zapatillas About" id="nosotros" />
 
       <InfoTextStyled>
         <h2>Ofrecemos calzado de alta calidad</h2>
@@ -16,6 +16,7 @@ const About = () => {
           que das. Entra en un mundo de elegancia y confianza, donde tus pies
           merecen lo mejor.
         </p>
+        <h2>2897</h2>
       </InfoTextStyled>
     </AboutContainerStyled>
   );

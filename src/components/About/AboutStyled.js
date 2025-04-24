@@ -27,6 +27,7 @@ export const InfoTextStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 18px;
     color: white;
     margin: 0;
     text-align: center;
